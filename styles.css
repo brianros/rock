@@ -29,19 +29,43 @@ button {
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
+    
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-textarea {
+textarea.result-box {
     margin-top: 20px;
-    width: 100%;
+    width: 50%;
     height: 100px;
     resize: none;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 10px;
+    transition: background-color 0.2s ease;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    display: block;
+    margin: 0 auto; /* Center the result box horizontally */
+    text-align: center; /* Center the text inside the result box */
+    background-color: transparent; /* Set initial background color */
+}
+
+/* Specificity adjustment for start class */
+textarea.result-box.start {
+    background-color: lightblue !important; /* Ensure the start class color is applied */
+}
+
+.result-box.win {
+    background-color: lightgreen;
+}
+
+.result-box.lose {
+    background-color: lightcoral;
+}
+
+.result-box.tie {
+    background-color: lightyellow;
 }
